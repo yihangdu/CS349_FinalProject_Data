@@ -11,7 +11,7 @@ Unnecessary columns (FileName, Rhythm, PatientAge, and Gender) are dropped. Only
 These three files are split from shuffled Diagnostics_processed.csv with the ratio of 6:2:2.
 
 - Diagnostics_preprocessing.ipynb
-Some simple preprocessing code to do what we have described above.
+Some simple preprocessing code to do what we have described above. If un-normalized data is needed, simply comment out the for-loop that normalizes the data and re-run all blocks.
 
 - ForWeka
 The directory contains scripts and files needed to do prediction with Weka. For most of algorithms assembled in Weka, we have 69% overall accuracy.
