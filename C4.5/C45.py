@@ -25,13 +25,6 @@ def C45(examples, default, label):
           keyProbability = frequencyDict[freq] / len(classList)
           parentEntropy -= keyProbability * math.log2(keyProbability)
 
-        # Calculate information gain for the feature
-        # informationGainDict = {} # hold information gain for each attribute: {att1: IG, att2: IG,...}
-        # for myKey in d[0]:
-        #   if myKey == 'Class':
-        #     continue
-
-
 
         childrenClass = {} # Hold split of class per value of attribute: {value1:{class1: #, class2: #,...},...}
         # Split class based on value of attribute first
@@ -264,7 +257,7 @@ def main():
     valid_data = read_data("../Diagnostics_valid.csv")
     test_data = read_data("../Diagnostics_test.csv")
 
-    #print(test_data)
+
 
     tree = C45(train_data, 0, "Beat")
     #print_tree(tree)
@@ -283,5 +276,4 @@ def main():
 
 
 if __name__ == "__main__":
-    #testID3AndTest()
     main()
